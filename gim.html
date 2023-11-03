@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="text" placeholder="Name" name="name" id="name" >
+      <input type="password" placeholder="password" name="password" id="password">
+      <button type="submit">submit</button>
+    </form>
+    <script>
+      const name = document.getElementById("name");
+      const password = document.getElementById("password");
+      const form = document.getElementById("form");
+
+      form.addEventListener('sumbit', onSubmit);
+
+      function onSubmit() {
+        if (name.value.length < 3) {
+          alert("username is too short");
+        } else if (password.value.length < 8) {
+          alert("password is too weak");
+        } else if (password.value.length > 15) {
+          alert("password is too long");
+        }
+      }
+    </script>
+  </body>
+</html>
