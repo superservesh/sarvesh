@@ -1,5 +1,5 @@
 const http = require("http");
-const result = [1, 2, 3, 4, 5];
+const result = [1, 2, 4, 5];
 
 const server = http.createServer( (req, res) => {
     if(req.url==='/'){
